@@ -7,15 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="DTOs\Brand\" />
+    <Folder Include="DTOs\Category\" />
     <Folder Include="DTOs\Brand\" />
     <Folder Include="DTOs\Category\" />
     <Folder Include="DTOs\Store\" />
     <Folder Include="DTOs\Product\" />
+    <Folder Include="DTOs\Store\" />
+    <Folder Include="DTOs\Product\" />
+    <Folder Include="Features\Commands\" />
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Queries\" />
+    <Folder Include="Features\Queries\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Mappers\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Validators\" />
     <Folder Include="Validators\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>

@@ -1,11 +1,17 @@
 
-namespace SocialMediaBasedOnlineShoppingWebsite.API
+using App.Infrastructure;
+using App.Persistence;
+
+namespace App.API
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddInfrastructureServices();
+            builder.Services.AddPersistenceServices();
 
             // Add services to the container.
 

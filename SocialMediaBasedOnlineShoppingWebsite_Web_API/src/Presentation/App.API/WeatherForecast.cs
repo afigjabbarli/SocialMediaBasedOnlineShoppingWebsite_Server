@@ -1,4 +1,4 @@
-namespace SocialMediaBasedOnlineShoppingWebsite.API
+namespace App.API
 {
     public class WeatherForecast
     {

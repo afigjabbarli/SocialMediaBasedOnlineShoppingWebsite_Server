@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace App.Persistence.Contexts
 {
-    public class BaseDbContext : DbContext
+    public abstract class BaseDbContext : DbContext
     {
         public BaseDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Category> Categories { get; set; }

@@ -1,4 +1,5 @@
 
+using App.Application;
 using App.Infrastructure;
 using App.Persistence;
 
@@ -10,6 +11,7 @@ namespace App.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddApplicationServices();  
             builder.Services.AddInfrastructureServices();
             builder.Services.AddPersistenceServices();
 

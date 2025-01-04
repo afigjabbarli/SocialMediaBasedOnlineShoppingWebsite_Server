@@ -4,7 +4,7 @@ using System;
 namespace App.Domain.Entities.Common
 {
     public interface IAuditable<TKey> : IEquatable<TKey>
-        where TKey : struct
+        where TKey : struct, IEquatable<TKey>
     {
         TKey? CreatedBy { get; set; }
         DateTime CreatedAt { get; set; }

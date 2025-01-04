@@ -35,6 +35,13 @@ namespace App.Persistence.Configurations.CategoryConfig
                    .HasColumnType("varchar")
                    .HasColumnName("Description")
                    .HasColumnOrder(3);
+
+            builder.Property(c => c.DisplayOrder)
+                   .HasAnnotation("DisplayOrder", "DisplayOrder is required for validation purposes")
+                   .IsRequired()
+                   .HasColumnType("integer")
+                   .HasColumnName("DisplayOrder")
+                   .HasColumnOrder(4); 
         }
     }
 }

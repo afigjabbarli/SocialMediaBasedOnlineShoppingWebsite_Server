@@ -52,7 +52,10 @@ namespace App.Persistence.Migrations
                         .HasAnnotation("Description", "Description is required for validation purposes");
 
                     b.Property<int>("DisplayOrder")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("DisplayOrder")
+                        .HasColumnOrder(4)
+                        .HasAnnotation("DisplayOrder", "DisplayOrder is required for validation purposes");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");

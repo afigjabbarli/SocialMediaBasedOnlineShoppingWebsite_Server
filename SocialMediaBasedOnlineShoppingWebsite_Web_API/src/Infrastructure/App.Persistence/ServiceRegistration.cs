@@ -14,14 +14,14 @@ namespace App.Persistence
             {
                 var configurationAccessor = services.BuildServiceProvider().GetRequiredService<IConfigurationAccessor>();
                 var writeDbCredentials = configurationAccessor.GetConnectionString("Development", "WriteDbCredentials");
-                options.UseNpgsql(writeDbCredentials);
+                options.UseNpgsql(writeDbCredentials, b => b.MigrationsAssembly("App.Persistence"));
             });
 
             services.AddDbContext<ReadDbContext>(options =>
             {
                 var configurationAccessor = services.BuildServiceProvider().GetRequiredService<IConfigurationAccessor>();
                 var readDbCredentials = configurationAccessor.GetConnectionString("Development", "ReadDbCredentials");
-                options.UseNpgsql(readDbCredentials);
+                options.UseNpgsql(readDbCredentials, b => b.MigrationsAssembly("App.Persistence"));
             });
 
             return services;
